@@ -288,15 +288,15 @@ Secret bao gồm nhưng không giới hạn:
 * OAuth Secret
 * Cloud Credential
 * JWT Secret
-* Production `.env`
+* Production environment config contents
 * Deployment Token
 
-Không được:
+Không được đưa giá trị thật vào output. Nếu cần nhắc đến secret, chỉ dùng dạng redacted:
 
 ```text
-API_KEY=abc123...
-DATABASE_PASSWORD=...
-AWS_SECRET_ACCESS_KEY=...
+API_KEY=[REDACTED]
+DATABASE_PASSWORD=[REDACTED]
+AWS_SECRET_ACCESS_KEY=[REDACTED]
 ```
 
 trong:
