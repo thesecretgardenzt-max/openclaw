@@ -138,6 +138,8 @@ Developer phải:
 * Không tạo dependency không cần thiết.
 * Không phá compatibility nếu Technical Plan không yêu cầu.
 * Thêm hoặc cập nhật test phù hợp với thay đổi.
+* Không commit file sinh tự động hoặc runtime local như `.venv/`, `__pycache__/`, `.pytest_cache/`, `instance/`, database local, `.DS_Store`, log, cache hoặc file env/secret.
+* Nếu test/build sinh ra các file này, phải xóa hoặc đảm bảo chúng nằm trong `.gitignore` trước khi handoff.
 
 Ưu tiên:
 

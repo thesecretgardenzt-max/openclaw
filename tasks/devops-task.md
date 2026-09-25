@@ -263,6 +263,7 @@ Ví dụ:
 [ ] Health check passed
 [ ] Smoke test passed
 [ ] Logs checked
+[ ] Repository hygiene verified: không có `.venv/`, `__pycache__/`, `.pytest_cache/`, database local, `.DS_Store`, log, cache hoặc file env/secret trong release artifact
 [ ] Rollback procedure verified
 [ ] Runbook updated
 [ ] Release note created

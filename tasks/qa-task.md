@@ -79,6 +79,8 @@ Bạn phải:
 8. Chạy hoặc đánh giá các automated tests hiện có.
 9. Ghi nhận bug rõ ràng nếu phát hiện lỗi.
 10. Đưa ra kết quả PASS hoặc FAIL dựa trên bằng chứng kiểm thử.
+11. Kiểm tra repository không chứa file runtime/cache/secret sinh ra trong quá trình test như `.venv/`, `__pycache__/`, `.pytest_cache/`, `instance/`, database local, `.DS_Store`, log, cache hoặc file env/secret.
+12. Nếu phát hiện các file này trong change set hoặc artifact, đánh dấu FAIL/BLOCKED theo mức độ và yêu cầu Developer cleanup hoặc cập nhật `.gitignore`.
 
 ---
 

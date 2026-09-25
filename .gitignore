@@ -32,3 +32,27 @@ Thumbs.db
 dist/
 build/
 coverage/
+# Python local/runtime
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+**/.venv/
+**/venv/
+instance/
+**/instance/
+*.sqlite
+*.sqlite3
+*.db
+# Local artifacts / temp
+*.tmp
+*.bak
+*.swp
+**/.DS_Store
