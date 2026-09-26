@@ -1,0 +1,7 @@
+Required structure: PASS
+Legacy locations removed: PASS
+Schema projection against qa.schema.json: PASS
+Markdown schema sections: PASS
+Relative-path scan: PASS
+Sensitive-value/material scan: PASS
+Files scanned: 25

@@ -1,0 +1,6 @@
+b1412618c1d82b1ef310ae65a69dbcf2098e1becabd5e121b9da9c472893b621  qa/evidence/US-001/build-verification.log
+cc07b9fe9638a42e7e03ad76121f69ad8b9feee43e47b91639d4fb1f292ffd93  qa/evidence/US-001/coverage.log
+ae259eb03da9ccbf6ee22a2090c604190d0f87e1c4fdc3ac09180416a486e9ae  qa/evidence/US-001/independent-verification.log
+e0aa275f6e24f0d56472046a73954f292b52e718fe82c3b72962dec997604611  qa/evidence/US-001/pytest.log
+2ee0d89538876aa7bb2df27c6bd22d1e4a7c64e2cbe7fd7533bf9d5d56ce7e09  qa/evidence/US-001/source-hygiene.log
+7fc7e55791fef201dd500ac8430f453aeb41288d02264d27b12157ac15ec5868  qa/evidence/US-001/README.md

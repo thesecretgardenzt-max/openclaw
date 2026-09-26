@@ -1,0 +1,2 @@
+$ env -u GOOGLE_CLIENT_ID -u GOOGLE_CLIENT_SECRET -u SESSION_SECRET .venv/bin/python -c <startup-check>
+PASS | App từ chối khởi động khi thiếu GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, SESSION_SECRET

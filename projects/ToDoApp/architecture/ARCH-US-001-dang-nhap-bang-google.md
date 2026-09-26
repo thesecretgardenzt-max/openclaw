@@ -11,7 +11,7 @@
 | `source_ba_artifact.artifact_id` | `US-001` |
 | `source_ba_artifact.artifact_type` | `business_analysis` |
 | `source_ba_artifact.schema_version` | `markdown-user-story` |
-| Nguồn | `workspace-shared/requirements/US-001-dang-nhap-bang-google.md` |
+| Nguồn | `workspace-shared/projects/ToDoApp/requirements/US-001-dang-nhap-bang-google.md` |
 
 ## `architecture_summary`
 

@@ -1,0 +1,12 @@
+PASS | folder DEVOPS mới tồn tại
+PASS | folder US cũ không còn
+PASS | devops.md tồn tại
+PASS | runbook.md tồn tại
+PASS | release-note.md tồn tại
+PASS | evidence tồn tại
+PASS | không còn reference folder US cũ
+PASS | có reference folder DEVOPS mới
+PASS | không có absolute workspace path
+PASS | không có private key marker
+PASS | status giữ nguyên
+SUMMARY | 11 passed, 0 failed

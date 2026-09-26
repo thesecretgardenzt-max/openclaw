@@ -1,0 +1,5 @@
+PASS | Ba Markdown đích tồn tại và không rỗng
+PASS | Thư mục evidence đích tồn tại
+PASS | Ba file nguồn legacy và thư mục evidence legacy đã được dọn
+PASS | Không còn reference legacy trong ba Markdown và evidence áp dụng
+PASS | Không có đường dẫn tuyệt đối trong Markdown/evidence

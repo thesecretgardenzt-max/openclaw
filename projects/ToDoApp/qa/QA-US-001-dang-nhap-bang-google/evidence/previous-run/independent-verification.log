@@ -1,0 +1,12 @@
+PASS | QA-UI-01 unauthenticated login page
+PASS | QA-UI-02 Google-only method
+PASS | QA-UI-03 accessible Google link target
+PASS | QA-CONTRACT-01 fixed routes/methods
+PASS | QA-CONTRACT-02 callback URL
+PASS | QA-AUTH-01 callback redirects to Todo List
+PASS | QA-SESSION-01 signed cookie attributes/TTL
+PASS | QA-DATA-01 google_sub UNIQUE NOT NULL
+PASS | QA-SESSION-02 Secure over HTTPS
+PASS | QA-NEG-01 cancel returns error without session
+SUMMARY | 10 passed, 0 failed
+SENSITIVE VALUES | not printed; cookie/token values omitted

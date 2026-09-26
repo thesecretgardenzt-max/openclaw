@@ -24,14 +24,14 @@
 
 | path | operation | summary | component_id | linked_requirement_ids |
 |---|---|---|---|---|
-| `workspace-shared/app/.gitignore` | `create` | Bỏ qua virtualenv, cache Python, pytest và database runtime. | `CMP-001` | `US-001` |
-| `workspace-shared/app/app.py` | `create` | App factory, Authlib Google flow, user persistence, signed cookie 24 giờ, route guard và logout. | `CMP-001` | `US-001`, `AC-001`, `AC-002`, `AC-003` |
-| `workspace-shared/app/requirements.txt` | `create` | Khai báo dependency runtime được pin. | `CMP-001` | `US-001` |
-| `workspace-shared/app/templates/login.html` | `create` | Login Page có tên app, nút Google và vùng thông báo lỗi accessible. | `CMP-001` | `AC-001`, `AC-003` |
-| `workspace-shared/app/templates/todos.html` | `create` | Trang Todo List tối thiểu sau đăng nhập và form logout POST. | `CMP-001` | `AC-002` |
-| `workspace-shared/app/tests/test_auth.py` | `create` | Test UI, route, callback success/fail/cancel, user unique, cookie, expiry, guard và logout. | `CMP-001` | `US-001`, `AC-001`, `AC-002`, `AC-003` |
-| `workspace-shared/app/README.md` | `create` | Hướng dẫn setup, cấu hình redacted, chạy app và test. | `CMP-001` | `US-001` |
-| `workspace-shared/implementation/IMPL-US-001-dang-nhap-bang-google.md` | `create` | Báo cáo triển khai, change note và hướng dẫn QA. | `CMP-001` | `US-001` |
+| `workspace-shared/projects/ToDoApp/app/.gitignore` | `create` | Bỏ qua virtualenv, cache Python, pytest và database runtime. | `CMP-001` | `US-001` |
+| `workspace-shared/projects/ToDoApp/app/app.py` | `create` | App factory, Authlib Google flow, user persistence, signed cookie 24 giờ, route guard và logout. | `CMP-001` | `US-001`, `AC-001`, `AC-002`, `AC-003` |
+| `workspace-shared/projects/ToDoApp/app/requirements.txt` | `create` | Khai báo dependency runtime được pin. | `CMP-001` | `US-001` |
+| `workspace-shared/projects/ToDoApp/app/templates/login.html` | `create` | Login Page có tên app, nút Google và vùng thông báo lỗi accessible. | `CMP-001` | `AC-001`, `AC-003` |
+| `workspace-shared/projects/ToDoApp/app/templates/todos.html` | `create` | Trang Todo List tối thiểu sau đăng nhập và form logout POST. | `CMP-001` | `AC-002` |
+| `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `create` | Test UI, route, callback success/fail/cancel, user unique, cookie, expiry, guard và logout. | `CMP-001` | `US-001`, `AC-001`, `AC-002`, `AC-003` |
+| `workspace-shared/projects/ToDoApp/app/README.md` | `create` | Hướng dẫn setup, cấu hình redacted, chạy app và test. | `CMP-001` | `US-001` |
+| `workspace-shared/projects/ToDoApp/implementation/IMPL-US-001-dang-nhap-bang-google.md` | `create` | Báo cáo triển khai, change note và hướng dẫn QA. | `CMP-001` | `US-001` |
 
 ## `dependencies`
 
@@ -46,7 +46,7 @@
 
 | id | kind | description | migration_path | rollback_path | data_loss_risk |
 |---|---|---|---|---|---|
-| `DBCHG-001` | `schema` | App tự tạo bảng SQLite `users(id, google_sub UNIQUE NOT NULL)` khi khởi tạo. | `workspace-shared/app/app.py::_init_database` | Xóa database runtime trong `workspace-shared/app/instance/` đối với demo local. | `low` |
+| `DBCHG-001` | `schema` | App tự tạo bảng SQLite `users(id, google_sub UNIQUE NOT NULL)` khi khởi tạo. | `workspace-shared/projects/ToDoApp/app/app.py::_init_database` | Xóa database runtime trong `workspace-shared/projects/ToDoApp/app/instance/` đối với demo local. | `low` |
 
 ## `configuration_changes`
 
@@ -68,12 +68,12 @@
 
 | id | level | name | path | linked_requirement_ids | result |
 |---|---|---|---|---|---|
-| `TEST-001` | `integration` | Login Page chỉ cung cấp Google | `workspace-shared/app/tests/test_auth.py` | `AC-001`, `AC-003` | `passed` |
-| `TEST-002` | `integration` | Route start dùng callback cố định | `workspace-shared/app/tests/test_auth.py` | `AC-002` | `passed` |
-| `TEST-003` | `integration` | Callback success tạo/reuse user và signed cookie | `workspace-shared/app/tests/test_auth.py` | `AC-002` | `passed` |
-| `TEST-004` | `integration` | Callback fail/cancel không tạo session và hiện message | `workspace-shared/app/tests/test_auth.py` | `AC-002` | `passed` |
-| `TEST-005` | `security` | Cookie sai chữ ký hoặc hết hạn không cấp quyền | `workspace-shared/app/tests/test_auth.py` | `AC-002` | `passed` |
-| `TEST-006` | `integration` | Logout xóa app session | `workspace-shared/app/tests/test_auth.py` | `US-001` | `passed` |
+| `TEST-001` | `integration` | Login Page chỉ cung cấp Google | `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `AC-001`, `AC-003` | `passed` |
+| `TEST-002` | `integration` | Route start dùng callback cố định | `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `AC-002` | `passed` |
+| `TEST-003` | `integration` | Callback success tạo/reuse user và signed cookie | `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `AC-002` | `passed` |
+| `TEST-004` | `integration` | Callback fail/cancel không tạo session và hiện message | `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `AC-002` | `passed` |
+| `TEST-005` | `security` | Cookie sai chữ ký hoặc hết hạn không cấp quyền | `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `AC-002` | `passed` |
+| `TEST-006` | `integration` | Logout xóa app session | `workspace-shared/projects/ToDoApp/app/tests/test_auth.py` | `US-001` | `passed` |
 
 ## `security_review`
 
@@ -87,11 +87,11 @@
 
 | command | purpose | result | evidence |
 |---|---|---|---|
-| `cd workspace-shared/app && python3 -m pytest -q` | Kiểm tra test runner sẵn có trước setup. | `failed` | Python hệ thống chưa cài `pytest`; sau đó tạo virtualenv theo README. |
-| `cd workspace-shared/app && python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt pytest` | Tạo môi trường test và cài dependency. | `passed` | Dependency runtime và pytest được cài thành công. Lần đầu phát hiện thiếu `requests`; đã bổ sung dependency trực tiếp và cài lại. |
-| `cd workspace-shared/app && .venv/bin/python -m pytest -q` | Chạy test tự động cuối cùng. | `passed` | `9 passed in 0.20s`. |
-| `cd workspace-shared/app && .venv/bin/python -m compileall -q app.py tests` | Kiểm tra Python syntax/bytecode compilation. | `passed` | Command kết thúc với exit code 0, không có lỗi. |
-| `cd workspace-shared/app && .venv/bin/python -m pip check` | Kiểm tra dependency consistency. | `passed` | `No broken requirements found.` |
+| `cd workspace-shared/projects/ToDoApp/app && python3 -m pytest -q` | Kiểm tra test runner sẵn có trước setup. | `failed` | Python hệ thống chưa cài `pytest`; sau đó tạo virtualenv theo README. |
+| `cd workspace-shared/projects/ToDoApp/app && python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt pytest` | Tạo môi trường test và cài dependency. | `passed` | Dependency runtime và pytest được cài thành công. Lần đầu phát hiện thiếu `requests`; đã bổ sung dependency trực tiếp và cài lại. |
+| `cd workspace-shared/projects/ToDoApp/app && .venv/bin/python -m pytest -q` | Chạy test tự động cuối cùng. | `passed` | `9 passed in 0.20s`. |
+| `cd workspace-shared/projects/ToDoApp/app && .venv/bin/python -m compileall -q app.py tests` | Kiểm tra Python syntax/bytecode compilation. | `passed` | Command kết thúc với exit code 0, không có lỗi. |
+| `cd workspace-shared/projects/ToDoApp/app && .venv/bin/python -m pip check` | Kiểm tra dependency consistency. | `passed` | `No broken requirements found.` |
 | Google OAuth end-to-end với credential thật | Xác minh redirect, consent và callback với Google Identity thật. | `not_run` | Không dùng credential hoặc cấu hình OAuth thật trong môi trường pipeline; QA cần chạy ở demo environment đã cấu hình. |
 
 ## `known_limitations`
@@ -113,7 +113,7 @@
 ## `handoff_to_qa`
 
 - **build_identifier:** `IMPL-US-001`
-- **test_entrypoint:** `cd workspace-shared/app && python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt pytest && .venv/bin/python -m pytest -q`
+- **test_entrypoint:** `cd workspace-shared/projects/ToDoApp/app && python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt pytest && .venv/bin/python -m pytest -q`
 - **test_data_requirements:** Không cần dữ liệu thật cho automated tests; manual OAuth cần Google test account và cấu hình secret ngoài source.
 - **high_risk_areas:** Redirect URI Google, OAuth state session, cookie flags sau HTTPS proxy, session expiry 24 giờ.
 - **known_failures:** Không có failure còn tồn tại trong test suite; Google OAuth end-to-end chưa chạy.
@@ -132,18 +132,18 @@ Thêm app demo đăng nhập Google tối thiểu, signed cookie 24 giờ, user 
 
 ## Technical Plan Reference
 
-`workspace-shared/architecture/ARCH-US-001-dang-nhap-bang-google.md`, `CMP-001`, `INT-001`–`INT-004`, `ARCH-TASK-001`–`ARCH-TASK-003`.
+`workspace-shared/projects/ToDoApp/architecture/ARCH-US-001-dang-nhap-bang-google.md`, `CMP-001`, `INT-001`–`INT-004`, `ARCH-TASK-001`–`ARCH-TASK-003`.
 
 ## Files Changed
 
-- `workspace-shared/app/.gitignore`
-- `workspace-shared/app/app.py`
-- `workspace-shared/app/requirements.txt`
-- `workspace-shared/app/templates/login.html`
-- `workspace-shared/app/templates/todos.html`
-- `workspace-shared/app/tests/test_auth.py`
-- `workspace-shared/app/README.md`
-- `workspace-shared/implementation/IMPL-US-001-dang-nhap-bang-google.md`
+- `workspace-shared/projects/ToDoApp/app/.gitignore`
+- `workspace-shared/projects/ToDoApp/app/app.py`
+- `workspace-shared/projects/ToDoApp/app/requirements.txt`
+- `workspace-shared/projects/ToDoApp/app/templates/login.html`
+- `workspace-shared/projects/ToDoApp/app/templates/todos.html`
+- `workspace-shared/projects/ToDoApp/app/tests/test_auth.py`
+- `workspace-shared/projects/ToDoApp/app/README.md`
+- `workspace-shared/projects/ToDoApp/implementation/IMPL-US-001-dang-nhap-bang-google.md`
 
 ## Changes
 
@@ -183,7 +183,7 @@ QA cần chú ý callback URL, cookie flags trên HTTPS, fail/cancel không tạ
 ## Setup
 
 ```bash
-cd workspace-shared/app
+cd workspace-shared/projects/ToDoApp/app
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt pytest
 ```

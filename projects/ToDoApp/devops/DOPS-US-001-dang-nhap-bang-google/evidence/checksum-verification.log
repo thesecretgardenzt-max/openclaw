@@ -1,0 +1,15 @@
+$ shasum -a 256 -c devops/US-001/evidence/SHA256SUMS.txt
+devops/US-001/dang-nhap-bang-google-devops.md: OK
+devops/US-001/dang-nhap-bang-google-release-note.md: OK
+devops/US-001/dang-nhap-bang-google-runbook.md: OK
+devops/US-001/evidence/README.md: OK
+devops/US-001/evidence/app-integrity.log: OK
+devops/US-001/evidence/build-dependency-check.log: OK
+devops/US-001/evidence/config-validation.log: OK
+devops/US-001/evidence/https-cookie-smoke.log: OK
+devops/US-001/evidence/local-smoke.log: OK
+devops/US-001/evidence/organization-validation.log: OK
+devops/US-001/evidence/path-reorg-validation.log: OK
+devops/US-001/evidence/pytest.log: OK
+devops/US-001/evidence/report-validation.log: OK
+devops/US-001/evidence/security-hygiene.log: OK
