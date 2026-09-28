@@ -1,5 +1,0 @@
-$ cd workspace-shared/projects/ToDoApp/app && .venv/bin/python -m compileall -q app.py tests
-PASS | compileall
-$ cd workspace-shared/projects/ToDoApp/app && .venv/bin/python -m pip check
-No broken requirements found.
-PASS | dependency consistency

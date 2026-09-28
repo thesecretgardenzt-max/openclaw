@@ -1,8 +1,0 @@
-./.gitignore
-./README.md
-./app.py
-./pytest.ini
-./requirements.txt
-./templates/login.html
-./templates/todos.html
-./tests/test_auth.py

@@ -1,3 +1,0 @@
-$ git diff -- app
-$ git status --short -- app
-RESULT | PASS | App/business logic không bị thay đổi trong lần tổ chức lại artifact

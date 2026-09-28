@@ -1,8 +1,0 @@
-PASS | HTTPS callback redirect /todos
-PASS | Cookie có HttpOnly
-PASS | Cookie có SameSite=Lax
-PASS | Cookie có Max-Age=86400
-PASS | Cookie có Secure trên HTTPS mô phỏng
-SUMMARY | 5 passed, 0 failed
-SENSITIVE VALUES | Cookie/token values không được in
-LIMITATION | Chưa xác minh HTTPS edge/reverse proxy thật

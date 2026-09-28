@@ -1,2 +1,0 @@
-# openclaw
-test openclaw

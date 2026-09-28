@@ -1,4 +1,0 @@
-$ .venv/bin/python -m compileall -q app.py tests
-compileall: PASS
-$ .venv/bin/python -m pip check
-No broken requirements found.

@@ -1,8 +1,0 @@
-PASS | GET / trả 200
-PASS | Login Page có Todo List
-PASS | Login Page có Continue with Google
-PASS | Login Page không có email/password
-PASS | /todos chưa xác thực redirect về /
-PASS | Route/method contract đúng
-SUMMARY | 6 passed, 0 failed
-NETWORK | Không gọi Google Identity; không dùng credential thật

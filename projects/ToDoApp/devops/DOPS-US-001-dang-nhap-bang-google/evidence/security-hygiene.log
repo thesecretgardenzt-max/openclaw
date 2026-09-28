@@ -1,5 +1,0 @@
-PASS | Không phát hiện private key marker trong app hoặc artifact DevOps US-001
-PASS | Không phát hiện pattern credential phổ biến đã kiểm tra
-PASS | Không có file .env trong app hoặc artifact DevOps US-001
-PASS | Artifact chỉ dùng [REDACTED]/SecretRef; không dùng credential thật
-NOT_RUN | Vulnerability scan, license review, artifact signature

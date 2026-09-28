@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -e
+LOCAL_GRADLE="$HOME/.gradle/wrapper/dists/gradle-7.4-bin/c0gwcg53nkjbqw7r0h0umtfvt/gradle-7.4/bin/gradle"
+if [ -x "$LOCAL_GRADLE" ]; then
+  exec "$LOCAL_GRADLE" "$@"
+fi
+if command -v gradle >/dev/null 2>&1; then
+  exec gradle "$@"
+fi
+echo "Gradle executable not found. Install Gradle or generate a standard Gradle wrapper." >&2
+exit 127
